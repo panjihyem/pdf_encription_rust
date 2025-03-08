@@ -1,0 +1,44 @@
+{
+    "app": {
+        "title": "Aplikasi Enkripsi PDF",
+        "description": "Enkripsi dan dekripsi PDF secara aman di browser Anda"
+    },
+    "actions": {
+        "upload": "Unggah PDF",
+        "encrypt": "Enkripsi",
+        "decrypt": "Dekripsi",
+        "download": "Unduh",
+        "clear": "Bersihkan",
+        "save": "Simpan",
+        "cancel": "Batal"
+    },
+    "settings": {
+        "title": "Pengaturan",
+        "language": "Bahasa",
+        "theme": "Tema",
+        "themes": {
+            "light": "Terang",
+            "dark": "Gelap"
+        },
+        "encryption": {
+            "title": "Pengaturan Enkripsi",
+            "remember_password": "Ingat Kata Sandi",
+            "auto_clear": "Bersihkan File Otomatis"
+        }
+    },
+    "messages": {
+        "upload_success": "File berhasil diunggah",
+        "upload_error": "Gagal mengunggah file",
+        "encrypt_success": "File berhasil dienkripsi",
+        "encrypt_error": "Gagal mengenkripsi file",
+        "decrypt_success": "File berhasil didekripsi",
+        "decrypt_error": "Gagal mendekripsi file",
+        "invalid_password": "Kata sandi tidak valid",
+        "invalid_file": "File PDF tidak valid"
+    },
+    "placeholders": {
+        "password": "Masukkan kata sandi",
+        "confirm_password": "Konfirmasi kata sandi",
+        "drop_files": "Letakkan file PDF di sini atau klik untuk mengunggah"
+    }
+}

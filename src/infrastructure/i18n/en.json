@@ -1,0 +1,44 @@
+{
+    "app": {
+        "title": "PDF Encryption App",
+        "description": "Secure PDF encryption and decryption in your browser"
+    },
+    "actions": {
+        "upload": "Upload PDF",
+        "encrypt": "Encrypt",
+        "decrypt": "Decrypt",
+        "download": "Download",
+        "clear": "Clear",
+        "save": "Save",
+        "cancel": "Cancel"
+    },
+    "settings": {
+        "title": "Settings",
+        "language": "Language",
+        "theme": "Theme",
+        "themes": {
+            "light": "Light",
+            "dark": "Dark"
+        },
+        "encryption": {
+            "title": "Encryption Settings",
+            "remember_password": "Remember Password",
+            "auto_clear": "Auto Clear Files"
+        }
+    },
+    "messages": {
+        "upload_success": "File uploaded successfully",
+        "upload_error": "Error uploading file",
+        "encrypt_success": "File encrypted successfully",
+        "encrypt_error": "Error encrypting file",
+        "decrypt_success": "File decrypted successfully",
+        "decrypt_error": "Error decrypting file",
+        "invalid_password": "Invalid password",
+        "invalid_file": "Invalid PDF file"
+    },
+    "placeholders": {
+        "password": "Enter password",
+        "confirm_password": "Confirm password",
+        "drop_files": "Drop PDF files here or click to upload"
+    }
+}
