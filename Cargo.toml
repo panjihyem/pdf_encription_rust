@@ -10,38 +10,53 @@ crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 yew = { version = "0.20", features = ["csr"] }
-wasm-bindgen = "0.2"
-wasm-bindgen-futures = "0.4"
-web-sys = { version = "0.3", features = [
-    "Window", "Document", "Element", "HtmlElement",
-    "Storage", "Performance", "PerformanceMemory",
-    "FileReader", "File", "FileList", "Blob",
-    "HtmlInputElement", "DragEvent", "DataTransfer"
+wasm-bindgen = "0.2.87"
+wasm-bindgen-futures = "0.4.37"
+web-sys = { version = "0.3.64", features = [
+    "Window",
+    "Document",
+    "Element",
+    "HtmlElement",
+    "Storage",
+    "FileReader",
+    "File",
+    "FileList",
+    "Blob",
+    "HtmlInputElement",
+    "DragEvent",
+    "DataTransfer",
+    "console"
 ] }
-js-sys = "0.3"
+js-sys = "0.3.64"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-ring = "0.17"
-rand = "0.8"
 getrandom = { version = "0.2", features = ["js"] }
-sha2 = "0.10"
+sha2 = { version = "0.10", features = ["std"] }
+aes-gcm = "0.10"
+pbkdf2 = { version = "0.12", features = ["simple"] }
 base64 = "0.21"
-uuid = { version = "1.0", features = ["v4", "serde"] }
-gloo = "0.8"
+uuid = { version = "1.0", features = ["v4", "serde", "js"] }
+gloo = { version = "0.8", features = ["storage"] }
 log = "0.4"
-console_log = "1.0"
-async-trait = "0.1"
-futures = "0.3"
-thiserror = "1.0"
+console_log = { version = "1.0", features = ["wasm-bindgen"] }
 wasm-logger = "0.2"
 yew-router = "0.17"
 stylist = { version = "0.12", features = ["yew_integration"] }
+pdf = "0.8"
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+wasm-bindgen = "0.2.87"
+wasm-bindgen-futures = "0.4.37"
+web-sys = "0.3.64"
+js-sys = "0.3.64"
 
 [dev-dependencies]
-wasm-bindgen-test = "0.3"
+wasm-bindgen-test = "0.3.37"
 futures-util = "0.3"
 
 [profile.release]
 opt-level = 3
 lto = true
 codegen-units = 1
+panic = 'abort'
+strip = true

@@ -1,11 +1,11 @@
 use yew::prelude::*;
-use crate::presentation::context::LoadingContext;
+use crate::presentation::context::LoadingState;
 
 #[function_component(LoadingIndicator)]
 pub fn loading_indicator() -> Html {
-    let loading_ctx = use_context::<LoadingContext>().expect("No LoadingContext found");
+    let loading_state = use_context::<LoadingState>().expect("No LoadingState found");
 
-    if !loading_ctx.is_loading {
+    if !loading_state.is_loading {
         return html! {};
     }
 
@@ -15,7 +15,7 @@ pub fn loading_indicator() -> Html {
                 <div class="flex flex-col items-center">
                     <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
                     <p class="mt-4 text-gray-700 dark:text-gray-300">
-                        {loading_ctx.message.clone().unwrap_or_else(|| "Loading...".to_string())}
+                        {loading_state.message.clone().unwrap_or_else(|| "Loading...".to_string())}
                     </p>
                 </div>
             </div>
